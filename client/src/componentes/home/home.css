@@ -1,0 +1,40 @@
+.contenedor-home{
+  background-image: url('../../image/fondoHome.jpg');
+ background-repeat: no-repeat;
+ background-attachment: fixed;
+ background-size: 100% 100%;
+ margin-top: 0;
+  padding-top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.contenedor-cartas{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+  margin-top: 200px;
+}
+
+
+.carta-pokemon{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 420px;
+  background-color: rgba(86, 132, 187, 0.7);
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+  box-shadow: rgb(116, 132, 224) -4px 5px 12px;
+  color: black ;
+  overflow: hidden;
+}

@@ -1,0 +1,14 @@
+.Contenedor-nav{
+  background-color: aqua;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  top: 0%;
+  width: 190vh;
+  height: 10vh;
+  padding: 0 20px;
+  box-shadow: rgb(116, 132, 224) -4px 5px 12px;
+  color: black ;
+  overflow: hidden;
+  position: fixed;
+}

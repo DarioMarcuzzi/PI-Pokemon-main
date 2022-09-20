@@ -1,0 +1,5 @@
+export const GET_POKEMONS = 'GET_POKEMONS';
+export const GET_POKEMONS_BY_NAME = 'GET_POKEMONS_BY_NAME';
+export const RESTART = 'RESTART'
+export const POST_POKEMON = 'POST_POKEMON';
+export const GET_POKEMON_BY_ID = "GET_POKEMON_BY_ID";

@@ -1,0 +1,76 @@
+.contenedor-Landing-Page{
+  background-image: url('../../image/Sin\ título.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; 
+
+
+
+  height: 100vh;
+  width: 100vw;
+  
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.pokebolas{
+  color: white;
+  background-color: rgba(0, 0, 0, 0.6);
+  margin: auto;
+  width: 650px;
+  padding: 30px;
+  border-radius: 150px;
+  border: solid #EC3636;
+  cursor: pointer;
+}
+
+.pokebola:active{
+  opacity: 0.1;
+}
+
+.pokebola{
+  position: relative;
+  bottom: 100px;
+}
+
+.pokemon{
+  width: 150px;
+  position: relative;
+  top: 75px;
+}
+
+#p1{
+  position: relative;
+
+  
+}
+
+#p2{
+  position: relative;
+
+}
+
+#p3{
+  position: relative;
+
+}
+
+#squir{
+  left: 9%;
+}
+
+#char{
+  left: 1%;
+}
+
+#bulba{
+  right: 8%;
+}
+
+.logo{
+    max-height: 100px;
+    cursor: pointer;
+  
+}
