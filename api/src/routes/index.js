@@ -14,4 +14,3 @@ router.use('/pokemons', pokemonRouter)
 router.use('/types', typesRouter)
  
 module.exports = router;
- 

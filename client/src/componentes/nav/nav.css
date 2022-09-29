@@ -1,3 +1,4 @@
+
 .Contenedor-nav{
   background-color: aqua;
   display: flex;
@@ -6,9 +7,92 @@
   top: 0%;
   width: 190vh;
   height: 10vh;
-  padding: 0 20px;
+  padding: 20px;
   box-shadow: rgb(116, 132, 224) -4px 5px 12px;
   color: black ;
   overflow: hidden;
   position: fixed;
+  
 }
+.form{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+
+}
+.Contenedor-nav h5{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 255, 0.329);
+  border: 2px solid black;
+  width: 130px;
+  height: 30px;
+  margin-left: 0px;
+  border-radius: 5px;
+}
+
+.input-checkbox-type{
+  display: grid;
+  background-color: rgba(0, 0, 255, 0.329);
+  border-radius: 20px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-areas: "normal fighting flying" "poison ground rock" "bug ghost steel" "fire water grass" "electric psychic ice" "dragon dark fairy";
+  grid-gap: 0px;
+  border: 2px solid black;
+  margin-top: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  padding: 0px;
+
+}
+.button-name {
+  align-items: center;
+  appearance: none;
+  background-color: #FCFCFD;
+  border-radius: 4px;
+  border-width: 0;
+  box-shadow: rgba(45, 35, 66, 0.2) 0 2px 4px,rgba(45, 35, 66, 0.15) 0 7px 13px -3px,#D6D6E7 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #36395A;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  height: 48px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow .15s,transform .15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow,transform;
+  font-size: 18px;
+ }
+ 
+ .button-name:focus {
+  box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+ }
+ 
+ .button-name:hover {
+  box-shadow: rgba(45, 35, 66, 0.3) 0 4px 8px, rgba(45, 35, 66, 0.2) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+  transform: translateY(-2px);
+ }
+ 
+ .button-name:active {
+  box-shadow: #D6D6E7 0 3px 7px inset;
+  transform: translateY(2px);
+ }
+
+
+

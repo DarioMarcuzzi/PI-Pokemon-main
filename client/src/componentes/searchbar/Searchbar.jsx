@@ -10,13 +10,19 @@ export default function Searchbar(){
 
 
   const searchPokemon =() =>{
-    try{
-      dispatch(getPokemonByName(search))
+    if(search !== ""){
+      try{
+      dispatch(getPokemonByName(search.toLowerCase()))
       setSearch('')
     } catch (error){
       console.log(error)
     }
+
+  } else {
+    alert("Please enter a pokemon name")
   }
+  }
+
 
 
   const handleOnchange = (e) =>{
@@ -28,15 +34,15 @@ export default function Searchbar(){
 console.log(search)
   return(
     <div>
-      <input 
+      <input className="button-name"
       value={search}
       type="text" 
       placeholder="Search Pokemon"
       onChange={handleOnchange}
       />
-    <button
+    <button className="button-name"
     onClick={searchPokemon}
-    >buscar</button>
+    >Search</button>
 
     </div>
   )

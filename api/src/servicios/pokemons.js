@@ -45,11 +45,11 @@ const getPokemons = async (name) =>{
       
     }  else {
       
-      const apiUrlCrudo = await axios.get('https://pokeapi.co/api/v2/pokemon?limit=10')
+      const apiUrlCrudo = await axios.get('https://pokeapi.co/api/v2/pokemon?limit=15')
       
       const apiInfo = await apiUrlCrudo.data.results.map((e) =>{
         return {
-          name: e.name,
+        name: e.name,
         url: e.url,
         id: e.url.split('/')[6],
       }
@@ -59,7 +59,7 @@ const getPokemons = async (name) =>{
     
     let nuevoArray =[]
     for (let i = 0; i < result.length; i++) {
-      nuevoArray.push( await getPokemonsInfoById(result[i]))
+      nuevoArray.push( await getPokemonsInfoByUrl(result[i]))
       console.log(result[i])
 
     } 
@@ -78,7 +78,9 @@ const getPokemons = async (name) =>{
         id: e.id,
         name: e.name,
         image: e.image,
-        type: e.types.map((e) => e.name)
+        attack: e.attack,
+        type: e.types.map((e) => e.name),
+        createdInDb: e.createdInDb
       }
     })
 
@@ -86,6 +88,7 @@ const getPokemons = async (name) =>{
       return{
         id: e.id,
         name: e.name,
+        attack: e.stats[1].base_stat,
         type: e.types.map((e) => e.type.name),
         image: e.sprites.other['official-artwork'].front_default,
       }
@@ -110,7 +113,7 @@ catch(error){
 }
 }
 
-const getPokemonsInfoById = async(url) =>{
+const getPokemonsInfoByUrl = async(url) =>{
   const result = await axios.get(url)
   return result.data
 }     

@@ -1,6 +1,6 @@
 import React from "react";
 import './detailPokemon.css';
-import { useEffect , useState} from "react";
+import { useEffect ,} from "react";
 import { useDispatch, useSelector} from 'react-redux';
 import { Link } from "react-router-dom"; 
 import { useParams } from "react-router-dom";
@@ -12,6 +12,7 @@ export default function DetailPokemon() {
     const dispatch = useDispatch();
     const {id} = useParams();
     const detailPokemon = useSelector(state => state.pokemonDetail)
+    const filter = useSelector(state => state.pokemonFilter)
 
     useEffect(() =>{
       dispatch(getPokemonById(id))
@@ -22,16 +23,17 @@ export default function DetailPokemon() {
 
 
     console.log(detailPokemon.type? detailPokemon.type[0]:null)
-
+console.log(filter)
   return (
+    <div className="contenedor-principal-detail">
     <div id="pokedex">
-  <div id="left">
-    <div id="logo"></div>
-    <div id="bg_curve1_left"></div>
-    <div id="bg_curve2_left"></div>
-    <div id="curve1_left">
-      <div id="buttonGlass">
-        <div id="reflect"> </div>
+      <div id="left">
+        <div id="logo"></div>
+        <div id="bg_curve1_left"></div>
+        <div id="bg_curve2_left"></div>
+        <div id="curve1_left">
+          <div id="buttonGlass">
+          <div id="reflect"> </div>
       </div>
       <div id="miniButtonGlass1"></div>
       <div id="miniButtonGlass2"></div>
@@ -54,10 +56,10 @@ export default function DetailPokemon() {
       </div>
       <div id="buttonbottomPicture"></div>
       <div id="speakers">
-        <div class="sp"></div>
-        <div class="sp"></div>
-        <div class="sp"></div>
-        <div class="sp"></div>
+        <div className="sp"></div>
+        <div className="sp"></div>
+        <div className="sp"></div>
+        <div className="sp"></div>
       </div>
     </div>
     <div id="bigbluebutton"></div>
@@ -100,30 +102,32 @@ export default function DetailPokemon() {
       <strong>speed: </strong>{detailPokemon.speed}<br/><br/>
     </div>
     <div id="blueButtons1">
-      <div class="blueButton">{detailPokemon.type? detailPokemon.type[0]:null}</div>
-      <div class="blueButton">{detailPokemon.type? detailPokemon.type[1]:null}</div>
-      <div class="blueButton">{detailPokemon.type? detailPokemon.type[2]:null}</div>
-      <div class="blueButton">{detailPokemon.type? detailPokemon.type[4]:null}</div>
-      <div class="blueButton"></div>
+      <div className="blueButton">{detailPokemon.type? detailPokemon.type[0]:null}</div>
+      <div className="blueButton">{detailPokemon.type? detailPokemon.type[1]:null}</div>
+      <div className="blueButton">{detailPokemon.type? detailPokemon.type[2]:null}</div>
+      <div className="blueButton">{detailPokemon.type? detailPokemon.type[4]:null}</div>
+      <div className="blueButton"></div>
     </div>
     <div id="blueButtons2">
-      <div class="blueButton"></div>
-      <div class="blueButton"></div>
-      <div class="blueButton"></div>
-      <div class="blueButton"></div>
-      <div class="blueButton"></div>
+      <div className="blueButton"></div>
+      <div className="blueButton"></div>
+      <div className="blueButton"></div>
+      <div className="blueButton"></div>
+      <div className="blueButton"></div>
     </div>
     <div id="miniButtonGlass4"></div>
     <div id="miniButtonGlass5"></div>
     <div id="barbutton3"></div>
     <div id="barbutton4"></div>
     <div id="yellowBox1"></div>
-    <div id="yellowBox2"></div>
+    <div id="yellowBox2"><Link to='/pokemons'> <button className="boton-back"><strong>Back</strong></button></Link></div>
     <div id="bg_curve1_right"></div>
     <div id="bg_curve2_right"></div>
     <div id="curve1_right"></div>
     <div id="curve2_right"></div>
   </div>
 </div>
+</div>
+
   );
 }
