@@ -75,6 +75,7 @@ switch(action.type){
       }
     
     case  RESET_FILTER:
+      console.log("esto se ejecuta" ,state.allPokemon)
       return {
         ...state,
         listaPokemon: state.allPokemon,
