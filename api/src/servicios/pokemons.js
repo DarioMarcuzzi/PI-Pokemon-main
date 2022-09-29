@@ -45,7 +45,7 @@ const getPokemons = async (name) =>{
       
     }  else {
       
-      const apiUrlCrudo = await axios.get('https://pokeapi.co/api/v2/pokemon?limit=15')
+      const apiUrlCrudo = await axios.get('https://pokeapi.co/api/v2/pokemon?limit=10')
       
       const apiInfo = await apiUrlCrudo.data.results.map((e) =>{
         return {
@@ -63,6 +63,7 @@ const getPokemons = async (name) =>{
       console.log(result[i])
 
     } 
+    console.log(nuevoArray)
     const dbCrudo = await Pokemon.findAll({ include:{
       model:Type,
       attributes: ['name'],
@@ -75,7 +76,9 @@ const getPokemons = async (name) =>{
     
     const dbInfo = dbCrudo.map((e) => {
       return {
+
         id: e.id,
+        hp: e.hp,
         name: e.name,
         image: e.image,
         attack: e.attack,
@@ -87,6 +90,7 @@ const getPokemons = async (name) =>{
     const infoApi = nuevoArray.map((e) =>{
       return{
         id: e.id,
+        hp: e.stats[0].base_stat,
         name: e.name,
         attack: e.stats[1].base_stat,
         type: e.types.map((e) => e.type.name),

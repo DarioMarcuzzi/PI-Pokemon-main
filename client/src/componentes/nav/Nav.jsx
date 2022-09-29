@@ -105,6 +105,10 @@ export default function Nav() {
                 <option value="Menor">Min</option>
                 <option value="Mayor">Max</option>
               </optgroup>
+              <optgroup label="Pokemon by hp">
+                <option value="Mayorhp">Min HP</option>
+                <option value="Menorhp">Max HP</option>
+              </optgroup>
             </select>
           </div>
 

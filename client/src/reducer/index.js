@@ -87,6 +87,7 @@ switch(action.type){
     case ACTION_TYPE_ORDEN:
       
       let ordenPokemon = [...state.allPokemon]
+      console.log(ordenPokemon)
       switch(action.payload){
         case 'DB':
           let resultOrden = ordenPokemon.filter(e => e.createdInDb === true)
@@ -178,8 +179,38 @@ switch(action.type){
           return{
             ...state,
             pokemonFilter: resultOrden6
-          }
+          }    
+        case 'Menorhp':
+          let resultOrden7 = ordenPokemon.sort((a,b) => {
+            if(a.hp > b.hp){
+              return -1
+            }
+            if(a.hp < b.hp){
+              return 1
+            }
+            return 0
+          })
+          return {
+            ...state,
+            pokemonFilter: resultOrden7
 
+          } 
+
+        case 'Mayorhp':
+          let resultOrden8 = ordenPokemon.sort((a,b) => {
+            if(a.hp > b.hp){
+              return 1
+            }
+            if(a.hp < b.hp){
+              return -1
+            }
+            return 0
+          })
+          return {
+            ...state,
+            pokemonFilter: resultOrden8
+
+          } 
 
           default:
             return state

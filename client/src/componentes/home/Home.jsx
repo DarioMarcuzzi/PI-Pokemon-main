@@ -15,6 +15,7 @@ export default function Home() {
   const [listaPoke, setListaPoke] = useState([]);
   const [pagActual, setPagActual] = useState(0);
   const [ListaPoke1, setListaPoke1] = useState([]);
+  console.log("pokemons", pokemons)
 
   useEffect(() => {
     if (pokemons.length === 0) {
