@@ -12,7 +12,8 @@ export default function Searchbar(){
   const searchPokemon =() =>{
     if(search !== ""){
       try{
-      dispatch(getPokemonByName(search.toLowerCase()))
+      dispatch(getPokemonByName(search.toLowerCase().toLocaleString()))
+      console.log("search", search.toLocaleString().toLowerCase())
       setSearch('')
     } catch (error){
       console.log(error)

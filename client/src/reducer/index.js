@@ -103,15 +103,6 @@ switch(action.type){
               pokemonFilter: resultOrden
             }
           }
-          
-          
-          // console.log("resultOrden" , resultOrden)
-
-          
-          // return{
-          //   ...state,
-          //   pokemonFilter: resultOrden
-          // }
         case 'API':
           
           let resultOrden2 = ordenPokemon.filter(e => e.hasOwnProperty('createdInDb') === false)

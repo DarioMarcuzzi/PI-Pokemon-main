@@ -164,7 +164,7 @@ return (
       <div className="contenedor-imagen-name-type-pokemon">
         <div>
           <h3>Name your pokemon:</h3>
-          <input
+          <imput
            
             className="input-name"
             type="text"
