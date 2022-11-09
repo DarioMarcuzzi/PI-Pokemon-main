@@ -45,7 +45,7 @@ const getPokemons = async (name) =>{
       
     }  else {
       
-      const apiUrlCrudo = await axios.get('https://pokeapi.co/api/v2/pokemon?limit=10')
+      const apiUrlCrudo = await axios.get('https://pokeapi.co/api/v2/pokemon?limit=40')
       
       const apiInfo = await apiUrlCrudo.data.results.map((e) =>{
         return {
