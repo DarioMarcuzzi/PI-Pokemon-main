@@ -59,14 +59,14 @@ const updatePokemon = async () => {
   if (newPokemon.name === "") {
     alert("Name is required");
   } 
-  if (
+  else if (
     newPokemon.hp === 0 ||
     newPokemon.attack === 0 ||
     newPokemon.defense === 0 ||
     newPokemon.speed === 0 ||
     newPokemon.height === 0 ||  
     newPokemon.weight === 0 ||
-    newPokemon.type.length === 0
+    newPokemon.type.length === 0 
   ) {
     alert("All fields must be completed, the image is not required");
   } else if (newPokemon.image === "") {
@@ -164,8 +164,8 @@ return (
       <div className="contenedor-imagen-name-type-pokemon">
         <div>
           <h3>Name your pokemon:</h3>
-          <imput
-           
+          
+          <input
             className="input-name"
             type="text"
             onChange={capturarRango}
