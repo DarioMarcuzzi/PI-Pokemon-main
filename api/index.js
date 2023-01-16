@@ -27,7 +27,6 @@ const PORT = process.env.PGPORT;
 conn.sync({ force: false }).then(() => {
   server.listen(PORT, () => {
     getCarryTypesDb();
-
     console.log(`Server listening at ${PORT}`);
   });
 });
