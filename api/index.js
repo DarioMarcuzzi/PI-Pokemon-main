@@ -22,7 +22,7 @@ const { conn } = require("./src/db.js");
 //PRECARGAR DE TYPES
 const { getCarryTypesDb } = require("./src/servicios/types.js");
 
-const PORT = process.env.PGPORT;
+const PORT = process.env.PORT;
 
 conn.sync({ force: false }).then(() => {
   server.listen(PORT, () => {
