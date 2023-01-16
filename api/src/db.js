@@ -29,7 +29,7 @@ let sequelize =
         },
         ssl: true,
       })
-    : new Sequelize(`postgres://${PGUSER}:${PGPASSWORD}@${PGHOST}/videogames`, {
+    : new Sequelize(`postgres://${PGUSER}:${PGPASSWORD}@${PGHOST}/pokemon`, {
         logging: false,
         native: false,
       });
